@@ -116,6 +116,9 @@ hypothesize(unknown).             /* no diagnosis */
 
 /* animal identification rules */
 aardvark :-mammal,
+           herbivore,
+           verify(has_elongated_snout),
+           verify(has_reduced_ears).
 
 cheetah :- mammal,
            carnivore,
@@ -157,7 +160,7 @@ carnivore :- verify(eats_meat), !.
 carnivore :- verify(has_pointed_teeth),
              verify(has_claws),
              verify(has_forward_eyes).
-herbivore :-
+herbivore :-verify(eats_plants), !.
 omnivore  :-verify(eats_meat), verify(eats_plant), !.
 ungulate :- mammal,
             verify(has_hooves), !.
