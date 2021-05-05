@@ -606,7 +606,7 @@ vulture        :-    bird,
                        verify(is_a_predator),
                        verify(has_a_tail),
                     verify(hunched_over_stance).
-wren        :-    bird
+wren        :-    bird,
                 omnivore,
                 verify(is_airborne),
                 verify(breathes_air),
@@ -614,7 +614,7 @@ wren        :-    bird
                 verify(has_two_legs),
                    verify(has_a_tail),
                    verify(small_like_a_sparrow_but_has_longer_tail_comparatively),
-                verifty(bubbly_and_energetic).
+                verify(bubbly_and_energetic).
 
 pitviper    :-    reptile,
                 carnivore,
@@ -669,7 +669,7 @@ bass        :-      fish,
                     verify(has_backbone),
                     verify(has_fins),
                     verify(has_a_tail),
-                    verify(available_in_almost_any_water source).
+                    verify(available_in_almost_any_water_source).
 carp        :-  fish,
                 omnivore,
                 verify(lays_eggs),
@@ -679,7 +679,7 @@ carp        :-  fish,
                 verify(has_fins),
                 verify(has_a_tail),
                 verify(is_domestic),
-                verify(gold_yellow_brown_coloration)
+                verify(gold_yellow_brown_coloration),
                 verify(large_scales).
 catfish        :-   fish,
                     carnivore,
@@ -1008,7 +1008,7 @@ bird      :- verify(has_feathers), !.
 bird      :- verify(flys),
              verify(lays_eggs).
 reptile      :-verify(has_dermal_scales), !.
-reptile         :- verify(lays_eggs), verify(has_backbone), !
+reptile         :- verify(lays_eggs), verify(has_backbone), !.
 fish      :-verify(has_gills), !.
 amphibian :-verify(has_cold_blood), !.
 bug       :-verify(has_exoskeleton), !.
